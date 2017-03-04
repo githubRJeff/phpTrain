@@ -45,6 +45,8 @@ var_dump($mix_str_replace);
 //mixed substr_replace(string string,string replacement,int start,int [length])
 //第一个参数是指定字符串，第二个参数是要替换的字符串，第三个参数是起始位置，第四个是长度
 
+//mb_strlen获取字符串长度，是字符数，如根据gbk/utf-8下面的字符串就是9个字符，根据默认编码则是12个字符
+//mb_strwidth获取字符串的宽度，是字节数，也是根据编码不同而改变宽度值
 $str = "aaa啊啊啊...";
 echo mb_strlen($str,"utf-8")."<br/>";
 echo mb_strwidth($str,'GB2312')."<br/>";
