@@ -40,6 +40,12 @@
 	}else{
 		echo $datas;
 	}
+//strip_tags(string[,allow]),将字符串的HTML标签删掉，allow可选，表示要保留的HTML样式
+$htmlStr = '<i><b>good</b></i>';;
+echo 'strip_tags:' . strip_tags($htmlStr,"<b>") . '<br/>';
+//iconv(in_charset, out_charset, str) 转化字符集编码，将str字符集从in_charset转到out_charset
+$str = "不是不是不是asasasasa";
+echo "iconv:" . iconv("UTF-8", "gbk", $str) . "<br/>";
 
 //ucwords() 字符串每一个单词开头字母都改为大写 ;
 //ucfirst() 字符串第一个字母改为大写
@@ -52,4 +58,6 @@ $tolower = strtolower("THIS IS UPPER")."<br/>";
 echo $tolower;
 $toupper = strtoupper("this is lower")."<br/>";
 echo $toupper;
+
+
 ?>
